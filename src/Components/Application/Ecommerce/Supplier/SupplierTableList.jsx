@@ -1098,12 +1098,13 @@ export const quoteSentColumns = [
     },
     {
         name: 'Action',
-        selector: (row) => row.action,
+        selector: (row) => row.action2,
         sortable: true,
-        center: false,
-        wrap: true,
-        minWidth: '200px',
-        maxWidth: '300px',
+        center:true,
+        sortable: true,
+        
+        // minWidth: '160px',
+        // maxWidth: '160px',
     },
 ];
 
@@ -1144,5 +1145,12 @@ export const quoteData = [
                 <Btn attrBtn={{ style: style2, color: 'primary', className: 'btn btn-xs', type: 'button' }}>View</Btn>
             </div>
         ),
+        action2: (
+            <div>
+                <span>
+                <input type={'CheckBox'}/> 
+                </span>
+            </div>
+        )
     }        
 ];
