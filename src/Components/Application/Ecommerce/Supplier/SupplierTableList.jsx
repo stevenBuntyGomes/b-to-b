@@ -1145,12 +1145,6 @@ export const quoteData = [
                 <Btn attrBtn={{ style: style2, color: 'primary', className: 'btn btn-xs', type: 'button' }}>View</Btn>
             </div>
         ),
-        action2: (
-            <div>
-                <span>
-                <input type={'CheckBox'}/> 
-                </span>
-            </div>
-        )
+        
     }        
 ];

@@ -9,19 +9,21 @@ import {Btn} from '../../../../AbstractElements'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faFile, faExclamation, faPenSquare } from '@fortawesome/free-solid-svg-icons';
 import { API_ENDPOINT } from '../../../../Route/Routes';
+import { PreferedColumns, certificateData } from './Columns&Data';
+import DataTable from 'react-data-table-component';
 
 const PreferSupplierLocation = () => {
   return (
     <Fragment>
-            <Breadcrumbs parent={`${API_ENDPOINT}/app/ecommerce/product-list/Dubai`} title="Preferred Supplier Location" mainTitle="Preferred Supplier Location" />
+            <Breadcrumbs parent={`${API_ENDPOINT}/app/ecommerce/prefered-supplier-location/Dubai`} title="Prefered Location" mainTitle="Prefered Location" />
             <Container fluid={true}>
                 <Row>
                     <Col sm="12">
                         <Card>
-                            <HeaderCard title="Preferred Supplier Location " span1="Preferred Supplier Location" />
+                            <HeaderCard title="You can Add/Edit/Delete Location in this page." span1="You can Add/Edit/Delete Location in this page." />
                             <CardHeader className='mt-0'>
-                                <Btn link = {`${API_ENDPOINT}/app/ecommerce/create-product/Dubai`} attrBtn={{ color: "dark", className: "m-r-15", type: "submit" }} >
-                                    <FontAwesomeIcon className='me-2' icon={faFile}/> Create Product
+                                <Btn link = {`${API_ENDPOINT}/app/ecommerce/create-location/Dubai`} attrBtn={{ color: "dark", className: "m-r-15", type: "submit" }} >
+                                    <FontAwesomeIcon className='me-2' icon={faFile}/> Create Location
                                 </Btn>
                                 <Btn link = {`${API_ENDPOINT}/app/ecommerce/edit-product/Dubai`} attrBtn={{ color: "primary", className: "m-r-15", type: "submit" }} >
                                     <FontAwesomeIcon className='me-2' icon={faPenSquare}/> Edit
@@ -35,7 +37,9 @@ const PreferSupplierLocation = () => {
                             </CardHeader>
                             
                             <CardBody>
-                                <ProductTableData />
+                               <div className='table-responsive product-table'>
+                                    <DataTable noHeader pagination paginationServer columns={PreferedColumns} data={certificateData} highlightOnHover={true} striped={true} responsive={true} />
+                                </div>
                             </CardBody>
                         </Card>
                     </Col>

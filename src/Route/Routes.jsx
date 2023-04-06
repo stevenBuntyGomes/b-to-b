@@ -151,6 +151,8 @@ import PricingMemberShip from '../Components/Application/Ecommerce/PricingMember
 import PaymentDetails from '../Components/Application/Ecommerce/PaymentDetails';
 import ProductListContain from '../Components/Application/Ecommerce/ProductList';
 import CreateProduct from '../Components/Application/Ecommerce/ProductList/CreateProduct';
+import CreateCertificate from '../Components/Application/Ecommerce/ProductList/CreateCertificate';
+import Createlocation from '../Components/Application/Ecommerce/ProductList/Createlocation';
 import EditProduct from '../Components/Application/Ecommerce/ProductList/EditProduct';
 import Certificate from '../Components/Application/Ecommerce/ProductList/Certificate';
 import PreferSupplierLocation from '../Components/Application/Ecommerce/ProductList/PreferSupplierLocation';
@@ -367,6 +369,8 @@ export const routes = [
   { path: `${process.env.PUBLIC_URL}/app/ecommerce/checkout/:layout`, Component: <CheckOut /> },
   { path: `${process.env.PUBLIC_URL}/app/ecommerce/product-list/:layout`, Component: <ProductListContain /> },
   { path: `${process.env.PUBLIC_URL}/app/ecommerce/create-product/:layout`, Component: <CreateProduct /> },
+  { path: `${process.env.PUBLIC_URL}/app/ecommerce/create-certificate/:layout`, Component: <CreateCertificate /> },
+  { path: `${process.env.PUBLIC_URL}/app/ecommerce/create-location/:layout`, Component: <Createlocation /> },
   { path: `${process.env.PUBLIC_URL}/app/ecommerce/edit-product/:layout`, Component: <EditProduct /> },
   { path: `${process.env.PUBLIC_URL}/app/ecommerce/product-certificate/:layout`, Component: <Certificate /> },
   { path: `${process.env.PUBLIC_URL}/app/ecommerce/prefered-supplier-location/:layout`, Component: <PreferSupplierLocation /> },
